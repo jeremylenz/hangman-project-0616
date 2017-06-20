@@ -8,6 +8,7 @@ class SecretWord
     self.correct_guesses = []
     @revealed = false
     puts @answer
+    sleep(1)
   end
 
   def update_blanks

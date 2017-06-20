@@ -40,7 +40,8 @@ def start_game
   player_1 = Player.new(name)
   computer = Executioner.new
   current_game = Game.new(player_1, computer)
-  current_game.start
+  game_engine = PlayGame.new(current_game)
+  game_engine.play
 end
 
 
