@@ -74,7 +74,8 @@ attr_accessor :bad_guesses, :gallows, :status
 
     if word_guess != nil
       if self.executioner.evaluate_word_guess(word_guess) == true
-      end_game(self.player)
+      self.executioner.secret_word.revealed == true
+      check_game_status
       else
         puts "Incorrect."
         sleep(1)
@@ -124,10 +125,5 @@ attr_accessor :bad_guesses, :gallows, :status
     # Ask the user if they want to play another game.  If so, create a new game and start it.
     # If not, Return to the main screen
   end
-
-
-
-
-
 
 end

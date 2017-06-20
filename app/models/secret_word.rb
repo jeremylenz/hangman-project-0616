@@ -1,7 +1,7 @@
 class SecretWord
 
-  attr_reader :answer, :revealed
-  attr_accessor :correct_guesses
+  attr_reader :answer
+  attr_accessor :correct_guesses, :revealed
 
   def initialize
     @answer = RandomWord.nouns(not_longer_than: 8).next.upcase
@@ -21,7 +21,7 @@ class SecretWord
       if !new_blanks.include?("_")
         @revealed = true
       end
-    puts new_blanks    
+    puts new_blanks
   end
 
 
