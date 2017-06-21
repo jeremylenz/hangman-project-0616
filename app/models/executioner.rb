@@ -12,7 +12,7 @@ class Executioner
 
   def generate_secret_word
   # Returns and sets the secret word
-    @secret_word = SecretWord.new
+    @secret_word = SecretWord.new(self)
   end
 
   def evaluate_guess(letter)
